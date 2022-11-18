@@ -5,7 +5,7 @@ from scipy.misc import derivative
 def f(x):
     return 4.5*pow(x,4) - 4*pow(x,3) + 1.5*pow(x,2) - 2*x - 7
 
-def kombo(a,b,eps):
+def komb(a,b,eps):
     if (derivative(f, a, n = 1)*derivative(f, a, n =2)>0):
         a0 = 0
         b0 = 0
@@ -22,4 +22,4 @@ def kombo(a,b,eps):
     x = (ai_1+bi_1)/2
     return print(f"\nSolving the equation by Newton*s method x = {round(x, 5)}\n")
 
-kombo(-2, -1/2, 0.0001)
+komb(-2, -1/2, 0.0001)
